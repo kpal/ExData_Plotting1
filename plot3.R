@@ -7,7 +7,7 @@ library(dplyr)
 subsetData <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), 
                      DateTime < as.Date("2007-02-03 00:00:00"))
 
-png("plot3.png",width=400, height=500)
+png("plot3.png", width=400, height=500)
 plot(subsetData$Sub_metering_1, type="l", xaxt='n', 
      ylab='Energy sub metering', xlab='')
 lines(subsetData$Sub_metering_2, xaxt='n', 

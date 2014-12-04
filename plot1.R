@@ -7,7 +7,7 @@ library(dplyr)
 subsetData <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), 
                     DateTime < as.Date("2007-02-03 00:00:00"))
 
-png("plot1.png",width=400, height=500)
+png("plot1.png", width=400, height=500)
 hist(subsetData$Global_active_power, col=2, main='GLobal Active Power', 
      xlab='Global Active Power (kilowatts)', ylab='Frequency')
 dev.off()

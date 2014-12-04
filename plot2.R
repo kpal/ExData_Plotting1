@@ -7,7 +7,7 @@ library(dplyr)
 subsetData <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), 
                      DateTime < as.Date("2007-02-03 00:00:00"))
 
-png("plot2.png",width=400, height=500)
+png("plot2.png", width=400, height=500)
 plot(subsetData$Global_active_power, type="l", xaxt='n', 
      ylab='Global Active Power (kilowatts)', xlab='')
 axis(1, at=c(1, 1440, 2880), labels=c("Thu", "Fri", "Sat"))
